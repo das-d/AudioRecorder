@@ -1,0 +1,30 @@
+﻿<Window x:Class="AudioRecorder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioRecorder"
+        mc:Ignorable="d"
+        Background="#333333"
+        Foreground="White"
+        FontFamily="Consolas"
+        Title="AudioRecorder"
+        Height="88" 
+        Width="203" 
+        Closed="Window_Closed" 
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <TextBlock Grid.Row="0" Text="00:00" x:Name="txtTimer" HorizontalAlignment="Center" FontSize="35"/>
+
+            <Button Content="•" x:Name="btnRecord" Click="btnRecordClick" Height="35" Width="35" Background="#333333" Foreground="Red" FontSize="60" Margin="5,0,0,0" Padding="0,-22.2,0,0" BorderBrush="#555555" BorderThickness="1"/>
+            <Button Content="■" Click="btnStopClick" Background="#333333" Height="35" Width="35" Foreground="White" FontSize="29" Margin="5,0,0,0" Padding="0,-4,0,0" BorderBrush="#555555" BorderThickness="1"/>
+        </StackPanel>
+    </Grid>
+</Window>
