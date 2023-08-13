@@ -23,8 +23,41 @@
         <StackPanel Orientation="Horizontal" Margin="5">
             <TextBlock Grid.Row="0" Text="00:00" x:Name="txtTimer" HorizontalAlignment="Center" FontSize="35"/>
 
-            <Button Content="•" x:Name="btnRecord" Click="btnRecordClick" Height="35" Width="35" Background="#333333" Foreground="Red" FontSize="60" Margin="5,0,0,0" Padding="0,-22.2,0,0" BorderBrush="#555555" BorderThickness="1"/>
-            <Button Content="■" Click="btnStopClick" Background="#333333" Height="35" Width="35" Foreground="White" FontSize="29" Margin="5,0,0,0" Padding="0,-4,0,0" BorderBrush="#555555" BorderThickness="1"/>
+            <Button Content="•" 
+                    x:Name="btnRecord" 
+                    Click="btnRecordClick" 
+                    Height="35" 
+                    Width="35" 
+                    Background="#333333" 
+                    Foreground="Red" 
+                    FontSize="60" 
+                    Margin="5,0,0,0" 
+                    Padding="0,-21.8,0,0" 
+                    BorderBrush="#555555" 
+                    BorderThickness="1">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="■" 
+                    Click="btnStopClick" 
+                    Background="#333333" 
+                    Height="35" 
+                    Width="35" 
+                    Foreground="White" 
+                    FontSize="29" 
+                    Margin="5,0,0,0" 
+                    Padding="0,-4,0,0" 
+                    BorderBrush="#555555" 
+                    BorderThickness="1">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
