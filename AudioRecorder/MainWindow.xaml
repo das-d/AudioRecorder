@@ -5,25 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AudioRecorder"
         mc:Ignorable="d"
-        Background="#333333"
+        Background="Transparent"
         Foreground="White"
         FontFamily="Consolas"
         Title="AudioRecorder"
-        Height="88" 
-        Width="203" 
+        Height="41" 
+        Width="182" 
         Closed="Window_Closed" 
+        WindowStyle="None"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen">
+        AllowsTransparency="True"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen" LostKeyboardFocus="Window_LostKeyboardFocus" GotKeyboardFocus="Window_GotKeyboardFocus" MouseDown="Window_MouseDown" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" Margin="5">
-            <TextBlock Grid.Row="0" Text="00:00" x:Name="txtTimer" HorizontalAlignment="Center" FontSize="35"/>
+        <Border Background="#333333" CornerRadius="9">
+            <StackPanel Orientation="Horizontal" Margin="2,0,2,0">
+                <TextBlock Grid.Row="0" Text="00:00" x:Name="txtTimer" HorizontalAlignment="Center" FontSize="35"/>
 
-            <Button Content="•" 
+                <Button Content="•" 
                     x:Name="btnRecord" 
                     Click="btnRecordClick" 
                     Height="35" 
@@ -35,13 +39,13 @@
                     Padding="0,-21.8,0,0" 
                     BorderBrush="#555555" 
                     BorderThickness="1">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-            <Button Content="■" 
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="■" 
                     Click="btnStopClick" 
                     Background="#333333" 
                     Height="35" 
@@ -52,12 +56,13 @@
                     Padding="0,-4,0,0" 
                     BorderBrush="#555555" 
                     BorderThickness="1">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-        </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

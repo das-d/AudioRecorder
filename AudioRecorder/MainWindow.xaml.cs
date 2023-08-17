@@ -128,5 +128,28 @@ namespace AudioRecorder
                 File.Delete($"{_tempPath}{_fileName}");
             }
         }
+
+        private void Window_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            this.Opacity = 0.5;
+        }
+
+        private void Window_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            this.Opacity = 1.0;
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+                
+            if(e.ChangedButton == MouseButton.Right)
+            {
+                this.Close();
+            }
+        }
     }
 }
