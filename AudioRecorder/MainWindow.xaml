@@ -16,7 +16,7 @@
         ResizeMode="NoResize"
         AllowsTransparency="True"
         Topmost="True"
-        WindowStartupLocation="CenterScreen" LostKeyboardFocus="Window_LostKeyboardFocus" GotKeyboardFocus="Window_GotKeyboardFocus" MouseDown="Window_MouseDown" >
+        WindowStartupLocation="CenterScreen" LostKeyboardFocus="Window_LostKeyboardFocus" GotKeyboardFocus="Window_GotKeyboardFocus" MouseDown="Window_MouseDown" MouseRightButtonDown="Window_MouseRightButtonDown" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

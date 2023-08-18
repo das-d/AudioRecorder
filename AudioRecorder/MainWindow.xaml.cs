@@ -145,11 +145,11 @@ namespace AudioRecorder
             {
                 this.DragMove();
             }
-                
-            if(e.ChangedButton == MouseButton.Right)
-            {
-                this.Close();
-            }
+        }
+
+        private void Window_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
         }
     }
 }
